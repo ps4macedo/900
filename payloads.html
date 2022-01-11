@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+<title>PS4MACEDO 9.00 ESP</title>
+<script>
+function setpayload(payload,title)
+{
+   sessionStorage.setItem('payload', payload);
+   sessionStorage.setItem('title', title);
+   window.open("loader.html", "_self");
+}
+</script>
+<style>
+.btn:-moz-focus-inner,
+.btn:focus{
+outline:0;
+border:none}
+.btn{
+font-family:arial;
+font-size:20px;
+text-transform:uppercase;
+font-weight:700;
+border:2px solid #404040;
+border-radius:4px;
+padding:10px;
+cursor:pointer;
+display:inline-block;
+text-decoration:none;
+background:0 0;
+color:#d4d7d8;
+box-shadow:0 5px 0 #878787}
+.btn:hover{
+font-size:20px;
+background:#000064;
+border:2px solid #fff;
+box-shadow:0 5px 0 #ccc;
+color:#fff}
+.btn:active{
+background:#ee596f;
+position:relative;
+color:#000;
+top:5px;
+box-shadow:none}
+body {
+background-color:#000024;
+background-image:url('bg1.png');
+background-attachment:fixed;
+background-size:100%;
+background-repeat:no-repeat;
+text-align:center}
+</style>
+</head>
+<body>
+<center>
+<br><br><br><br><br><br><br><br>
+<hr width="70%" size="1" color="#ff5757">
+<h1 id="progress" style="font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:white;">PS4MACEDO FW V9.00</font></h1>
+<hr width="70%" size="1" color="#ff5757">
+<br>
+<a onclick="setpayload('/goldhen2b2.bin','GoldHen v2.0b2')"><button class="btn" onmouseover="progress.innerHTML='GoldHen v2.0b2 por SISTR0 para PS4 9.00 Fw'" ;="" onmouseout="progress.innerHTML='PS4MACEDO FW V9.00'" type="button"> &nbsp;&nbsp;&nbsp;&nbsp;GoldHen v2.0b2&nbsp;&nbsp;&nbsp;&nbsp;</button></a>&nbsp;
+<a onclick="setpayload('/goldhen2b.bin','GoldHen v2.0b')"><button class="btn" onmouseover="progress.innerHTML='GoldHen v2.0b por SISTR0 para PS4 9.00 Fw'" ;="" onmouseout="progress.innerHTML='PS4MACEDO FW V9.00'" type="button"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GoldHen v2.0b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></a>&nbsp;
+<br><br>
+<a onclick="setpayload('/ftp.bin','FTP')"><button class="btn" onmouseover="progress.innerHTML='Um servidor FTP de acesso total para o PS4'" ;="" onmouseout="progress.innerHTML='PS4MACEDO FW V9.00'" type="button"> FTP </button></a>&nbsp;
+<a onclick="setpayload('/app2.bin','App2USB')"><button class="btn" onmouseover="progress.innerHTML='Mova os jogos instalados para uma unidade USB externa'" ;="" onmouseout="progress.innerHTML='PS4MACEDO FW V9.00'" type="button"> App2Usb </button></a>&nbsp;
+<a onclick="setpayload('/load_ToDex.bin','ToDex')"><button class="btn" onmouseover="progress.innerHTML='desbloqueia alguns recursos de depuração disponíveis no testkit'" ;="" onmouseout="progress.innerHTML='PS4MACEDO FW V9.00'" type="button"> ToDex </button></a>&nbsp;
+<a onclick="setpayload('/exitidu.bin','Exit IDU')"><button class="btn" onmouseover="progress.innerHTML='Desativar modo IDU'" ;="" onmouseout="progress.innerHTML='PS4MACEDO FW V9.00'" type="button"> Exit IDU </button></a>&nbsp;
+<a onclick="setpayload('/disableaslr.bin','Disable Aslr')".html" target="_self"><button class="btn" onmouseover="progress.innerHTML='desabilitar ASLR'" ;="" onmouseout="progress.innerHTML='PS4MACEDO FW V9.00'" type="button"> Disable Aslr </button></a>&nbsp;
+<a onclick="setpayload('/enablebrowser.bin','Enable Browser')"><button class="btn" onmouseover="progress.innerHTML='Habilitar Navegador'" ;="" onmouseout="progress.innerHTML='PS4MACEDO FW V9.00'" type="button"> Enable Browser </button></a>&nbsp;
+<a onclick="setpayload('/historybloker.bin','History Blocker')"><button class="btn" onmouseover="progress.innerHTML='Desative a abertura automática da última página usada no PS4 WebBrowser'" ;="" onmouseout="progress.innerHTML='PS4MACEDO FW V9.00'" type="button"> History Blocker </button></a>&nbsp;
+<br><br>
+<a onclick="setpayload('/Toolbox.bin','Orbis Toolbox')"><button class="btn" onmouseover="progress.innerHTML='Orbis Toolbox Loader Alfa 1190 para PS4 9.00 fw'" ;="" onmouseout="progress.innerHTML='PS4MACEDO FW V9.00'" type="button"> Orbis Toolbox </button></a>&nbsp;
+<a onclick="setpayload('/WebRTE.bin','WebRTE')"><button class="btn" onmouseover="progress.innerHTML='WebRTE para PS4 9.00 fw'" ;="" onmouseout="progress.innerHTML='PS4MACEDO FW V9.00'" type="button"> WebRTE </button></a>&nbsp;
+<a onclick="setpayload('/Ps4debug.bin','PS4Bebug')"><button class="btn" onmouseover="progress.innerHTML='ps4debug para PS4 9.00 fw'" ;="" onmouseout="progress.innerHTML='PS4MACEDO FW V9.00'" type="button"> Ps4debug </button></a>&nbsp;
+<a onclick="setpayload('/app-dumper.bin','Dumper Game')"><button class="btn" onmouseover="progress.innerHTML='Despeje jogos em uma unidade USB para poder criar arquivos fpkg'" ;="" onmouseout="progress.innerHTML='PS4MACEDO FW V9.00'" type="button"> Dumper Game </button></a>&nbsp;
+<a onclick="setpayload('/kerneldumper.bin','Kernel Dumper')"><button class="btn" onmouseover="progress.innerHTML='kernel dumper'" ;="" onmouseout="progress.innerHTML='PS4MACEDO FW V9.00'" type="button"> Kernel Dumper </button></a>&nbsp;
+<a onclick="setpayload('/mdumper.bin','Module Dumper')"><button class="btn" onmouseover="progress.innerHTML='module dumper'" ;="" onmouseout="progress.innerHTML='PS4MACEDO FW V9.00'" type="button"> Module Dumper </button></a>&nbsp;
+<br><br>
+<a onclick="setpayload('/disableupdates.bin','Disable Updates')"><button class="btn" onmouseover="progress.innerHTML='Cria arquivos fictícios na pasta de atualização do PS4'" ;="" onmouseout="progress.innerHTML='PS4MACEDO FW V9.00'" type="button">Disable Updates</button></a>&nbsp;
+<a onclick="setpayload('/enableupdates.bin','Enable Updates')"><button class="btn" onmouseover="progress.innerHTML='Remove os arquivos fictícios na pasta de atualização do PS4'" ;="" onmouseout="progress.innerHTML='PS4MACEDO FW V9.00'" type="button"> Enable Updates </button></a>&nbsp;
+<a onclick="setpayload('/backupdb.bin','DB Backup')"><button class="btn" onmouseover="progress.innerHTML='Crie um backup de arquivos de banco de dados importantes e dados do usuário'" ;="" onmouseout="progress.innerHTML='PS4MACEDO FW V9.00'" type="button"> DB Backup </button></a>&nbsp;
+<a onclick="setpayload('/restoredb.bin','DB Restore')"><button class="btn" onmouseover="progress.innerHTML='Restaure um backup dos arquivos de banco de dados e dados do usuário'" ;="" onmouseout="progress.innerHTML='PS4MACEDO FW V9.00'" type="button"> DB Restore </button></a>&nbsp;
+<a onclick="setpayload('/rifrenamer.bin','Rif renamer')"><button class="btn" onmouseover="progress.innerHTML='Rif Renamer'" ;="" onmouseout="progress.innerHTML='PS4MACEDO FW V9.00'" type="button"> Rif renamer </button></a>&nbsp;
+<a onclick="setpayload('/permanent.bin','Permanent UART')"><button class="btn" onmouseover="progress.innerHTML='UART permanente'" ;="" onmouseout="progress.innerHTML='PS4MACEDO FW V9.00'" type="button"> Permanent uart </button></a>&nbsp;
+<div style="text-align:left;position:fixed;left:10px;bottom:10px;width:100%;font-size:19px;color:#fff">Agradecimento Especial: <font color=#6089f6>TheFloW-SpecterDev-ChendoChap-Znullptr-Sleirsgoevy-SiSTRo-e todos que contribuíram com a cena.</font></div>
+</center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
