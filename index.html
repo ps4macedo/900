@@ -9,6 +9,10 @@ button:active{background:#ee596f;position:relative;color:#000;top:5px;box-shadow
 <meta charset="utf-8">
 <title>PS4MACEDO 9.00 SUPERLIGHT 7</title>
 
+<script> // carrega a cache
+window.applicationCache.onprogress=function(e){document.getElementById("progress").innerHTML='Instalando Cache Offline: <font color="#ee596f">'+Math.round(e.loaded/e.total*100)+"%</font>"},window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML='Cache <font color="#ee596f">instalada</font> com sucesso!!!',setTimeout(function(){document.getElementById("progress").innerHTML='Processo de download da cache para utilizar o <font color="#ee596f">host offline</font>.',document.getElementById("progress").innerHTML='Saia, <font color="#ee596f">desabilite a rede</font> e retorne ao navegador.', cache=true},1500)}
+</script>
+
 <script> // loader
 function loadBIN(){
 var xhr = new XMLHttpRequest();
