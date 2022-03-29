@@ -8,16 +8,10 @@ button:-moz-focus-inner, button:focus{outline:0;border:none}button{font-family:a
 <title>PS4MACEDO 9.00 FULL 5</title>
 
 <script> // carrega a cache
-window.applicationCache.onprogress=function(e){document.getElementById("progress").innerHTML='Instalando Cache Offline: <font color="#ee596f">'+Math.round(e.loaded/e.total*100)+"%</font>"},window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML='Cache <font color="#ee596f">instalada</font> com sucesso!!!',setTimeout(function(){document.getElementById("progress").innerHTML='Processo de download da cache para utilizar o <font color="#ee596f">host offline</font>.',document.getElementById("progress").innerHTML='Saia, <font color="#ee596f">desabilite a rede</font> e retorne ao navegador.', cache=true},1500)}
+window.applicationCache.onprogress=function(e){document.getElementById("progress").innerHTML='Instalando Cache Offline: <font color="#ee596f">'+Math.round(e.loaded/e.total*100)+"%</font>"},window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML='Cache <font color="#ee596f">instalada</font> com sucesso!!!',setTimeout(function(){document.getElementById("progress").innerHTML='Processo de download da cache para utilizar o <font color="#ee596f">host offline</font>.',poc();},1500)}
 </script>
 
 <script> // Loader
-function Esconder(){
-var appCache = window.applicationCache;
-if(appCache.status !== 1 && appCache.status !== 2){
-setTimeout(poc,500);
-}
-}
 function load_poc(){
 var xhr = new XMLHttpRequest();
 xhr.responseType = "arraybuffer";
@@ -210,7 +204,7 @@ function Bloader(){progress.innerHTML="Carregando Binloader... Por favor, aguard
 <script src="webkit.js"></script>
 </head>
 
-<body onload=Esconder()>
+<body onload=setTimeout(poc,500)>
 <br><br><br><br><br><br><br>
 <hr width="70%" size="1" color="#ff5757">
 <div id=progress style=font-size:31px;text-align:center;color:#fff>Preparando o desbloqueio. Por favor, <font color="#ee596f">AGUARDE!!!</font></div>
