@@ -5,14 +5,17 @@ body{background-color:#000024;background-image:url(bg1.png);background-attachmen
 button:-moz-focus-inner, button:focus{outline:0;border:none}button{font-family:arial;font-size:20px;text-transform:uppercase;font-weight:700;border:2px solid #404040;border-radius:4px;padding:10px;cursor:pointer;display:inline-block;text-decoration:none;background:0 0;color:#d4d7d8;box-shadow:0 5px 0 #878787}button:hover{font-size:20px;background:#000064;border:2px solid #fff;box-shadow:0 5px 0 #ccc;color:#fff}button:active{background:#ee596f;position:relative;color:#000;top:5px;box-shadow:none}
 </style>
 <meta charset="utf-8">
-<title>PS4MACEDO 9.00 FULL 3</title>
+<title>PS4MACEDO 9.00 FULL 5</title>
 
 <script> // carrega a cache
 window.applicationCache.ondownloading=function(){localStorage.isCached=!1},window.applicationCache.onprogress=function(e){document.getElementById("progress").innerHTML='Instalando Cache Offline: <font color="#ee596f">'+Math.round(e.loaded/e.total*100)+"%</font>"},window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML='Cache <font color="#ee596f">instalada</font> com sucesso!!!',localStorage.isCached=!0,setTimeout(function(){document.getElementById("progress").innerHTML='Processo de download da cache para utilizar o <font color="#ee596f">host offline</font>.',document.getElementById("progress").innerHTML='Saia, <font color="#ee596f">desabilite a rede</font> e retorne ao navegador.', cache=true},1500)}
 </script>
 
 <script> // Loader
-function Esconder(){if (localStorage.isCached){setTimeout(poc,150);}}
+function Esconder(){
+if (localStorage.isCached){
+setTimeout(poc,500);}
+}
 function load_poc(){
 var xhr = new XMLHttpRequest();
 xhr.responseType = "arraybuffer";
@@ -33,7 +36,7 @@ var buf = new Uint32Array(PLS);
 pl.set(buf,0);
 var pthread = p.malloc(0x10);
 chain.call(libKernelBase.add32(OFFSET_lk_pthread_create), pthread, 0x0, payload_buffer, 0);
-allset();
+window.progress.innerHTML= "Carga útil carregada com SUCESSO!!!";
 }
 else if (out_jb == "MLD"){
 var payload_buffer = chain.syscall(477, 0, 0x300000 , 7, 0x1002, -1, 0);
@@ -127,9 +130,6 @@ progress.innerHTML="Desbloqueio efetuado com SUCESSO!!!"
 setTimeout(function(){progress.innerHTML="LISTA DE CARGAS ÚTEIS"},3e3)
 mymenu.style.display="block";
 }
-function allset(){
-window.progress.innerHTML= "Carga útil carregada com SUCESSO!!!"
-}
 function Binset(){
 window.progress.innerHTML="Pronto! Envie as cargas úteis pela porta 9020";
 alert("\n\nPronto!\n\nEnvie as cargas úteis pela porta 9020");
@@ -173,9 +173,9 @@ eval.call(window, loadScript('netcat.js')
 +loadScript('relocator.js'));
 }, 1000);
 }
-function goldhen2b(){PLfile = "goldhen2b.bin";out_jb = "AllPL";load_poc();}
-function goldhen2b2(){PLfile = "goldhen2b2.bin";out_jb = "AllPL";load_poc();}
-function goldhen212(){PLfile = "goldhen212.bin";out_jb = "AllPL";load_poc();}
+function goldhen22(){PLfile = "goldhen22.bin";out_jb = "AllPL";load_poc();}
+function goldhen221(){PLfile = "goldhen221.bin";out_jb = "AllPL";load_poc();}
+function goldhen222(){PLfile = "goldhen222.bin";out_jb = "AllPL";load_poc();}
 function load_PS4Debug(){PLfile = "ps4debug.bin";out_jb = "AllPL";load_poc();}
 function load_permanentuart(){PLfile = "permanentuart.bin";out_jb = "AllPL";load_poc();}
 function load_App2USB(){PLfile = "app2usb.bin";out_jb = "AllPL";load_poc();}
@@ -208,7 +208,7 @@ function Bloader(){progress.innerHTML="Carregando Binloader... Por favor, aguard
 <script src="webkit.js"></script>
 </head>
 
-<body onload="Esconder()">
+<body onload=Esconder()>
 <br><br><br><br><br><br><br>
 <hr width="70%" size="1" color="#ff5757">
 <div id=progress style=font-size:31px;text-align:center;color:#fff>Preparando o desbloqueio. Por favor, <font color="#ee596f">AGUARDE!!!</font></div>
@@ -217,9 +217,9 @@ function Bloader(){progress.innerHTML="Carregando Binloader... Por favor, aguard
 <div style=display:none id=mymenu><br>
 <table align=center>
 <tr><td align="center">
-<button onmouseover="progress.innerHTML='GoldHen v2.1.2 por SISTR0'"; onmouseout="progress.innerHTML='LISTA DE CARGAS ÚTEIS'" onclick="goldhen212(); return false"><font color="#6089f6"> GoldHen V2.1.2 </font></button>&nbsp;
-<button onmouseover="progress.innerHTML='GoldHen v2.0b2 por SISTR0'"; onmouseout="progress.innerHTML='LISTA DE CARGAS ÚTEIS'" onclick="goldhen2b2(); return false"><font color="#6089f6"> GoldHen V2b2 </font></button>&nbsp;
-<button onmouseover="progress.innerHTML='GoldHen v2.0b por SISTR0'"; onmouseout="progress.innerHTML='LISTA DE CARGAS ÚTEIS'" onclick="goldhen2b(); return false"><font color="#6089f6"> GoldHen V2b </font></button>&nbsp;
+<button onmouseover="progress.innerHTML='GoldHen v2.2.2 por SISTR0'"; onmouseout="progress.innerHTML='LISTA DE CARGAS ÚTEIS'" onclick="goldhen222(); return false"><font color="#6089f6"> GoldHen V2.2.2 </font></button>&nbsp;
+<button onmouseover="progress.innerHTML='GoldHen v2.2.1 por SISTR0'"; onmouseout="progress.innerHTML='LISTA DE CARGAS ÚTEIS'" onclick="goldhen221(); return false"><font color="#6089f6"> GoldHen V2.2.1 </font></button>&nbsp;
+<button onmouseover="progress.innerHTML='GoldHen v2.2 por SISTR0'"; onmouseout="progress.innerHTML='LISTA DE CARGAS ÚTEIS'" onclick="goldhen22(); return false"><font color="#6089f6"> GoldHen V2.2 </font></button>&nbsp;
 <button onmouseover="progress.innerHTML='Mira Orbis'"; onmouseout="progress.innerHTML='LISTA DE CARGAS ÚTEIS'" onclick="Mira(); return false"><font color="#ee596f"> Mira </font></button>&nbsp;
 <button onmouseover="progress.innerHTML='Permite enviar arquivos .BIN para o PS4 pela porta 9021'"; onmouseout="progress.innerHTML='LISTA DE CARGAS ÚTEIS'" onclick="Mloader(); return false"> MiraLoader </button>&nbsp;
 <button onmouseover="progress.innerHTML='Permite enviar arquivos .BIN para o PS4 pela porta 9020'"; onmouseout="progress.innerHTML='LISTA DE CARGAS ÚTEIS'" onclick="Bloader(); return false"> BinLoader </button>&nbsp;
