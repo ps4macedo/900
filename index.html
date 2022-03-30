@@ -14,7 +14,7 @@ window.applicationCache.onprogress=function(e){document.getElementById("progress
 <script> // Loader
 function Esconder(){
 var appCache = window.applicationCache;
-if(appCache.status !== 1 && appCache.status !== 2){
+if(!(appCache.status !== 1 && appCache.status !== 2)){
 setTimeout(poc,500);}
 }
 function load_poc(){
